@@ -1,14 +1,15 @@
 <script>
   import { onMount } from 'svelte'
   import { onDestroy } from 'svelte'
-  export let countFrom = 0
-  export let countTo = 100
-  export let duration = 2000
+  export let countFrom
+  export let countTo
+  export let duration
+  export let startHack
 
-  let from = +countFrom
-  let to = +countTo
-  let totalTime = +duration
-  let number = from
+  $: from = +countFrom
+  $: to = +countTo
+  $: totalTime = +duration
+  $: number = from
 
   let observer
   let elem
@@ -36,10 +37,16 @@
   function handleIntersection (entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting && startTime === null) {
-        startTime = window.performance.now()
-        count()
+        startHack = 1
       }
     })
+  }
+
+  $: if (startHack > 0) {
+    startHack = 0
+    startTime = window.performance.now()
+    count()
+  } else {
   }
 
   onMount(() => {

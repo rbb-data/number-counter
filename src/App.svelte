@@ -8,6 +8,7 @@
   export let unit = ''
   export let textBefore = ''
   export let description = ''
+  export let startHack = 0
 
 </script>
 
@@ -51,7 +52,7 @@
 <div class='wrapper'>
   <p class="number-wrapper">
     <span class='text-before'>{textBefore}</span>
-    <NumberAnimator countFrom={+countFrom} countTo={+countTo} duration={+duration} />
+    <NumberAnimator countFrom={+countFrom} countTo={+countTo} duration={+duration} startHack={startHack} />
     <span class="unit">{unit}</span>
   </p>
   <p>{description}</p>
