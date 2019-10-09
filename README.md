@@ -2,6 +2,28 @@
 
 ## Usage
 
+You can embed this counter on any website. Just include it as an iframe like this:
+
+```html
+<iframe src="https://dj1.app.rbb-cloud.de/number-counter/#countTo=42"></iframe>
+```
+
+### Options
+
+You can set various options as a hash parameter on the iframe url.
+If you omit an option the default value is used.
+
+`countFrom` the initial state of the counter *default: 0*
+`countTo` the final state of the counter *default: 100*
+`duration` the time in ms it takes to get from the inital state to the final state *default: 2000*
+`unit` a unit string rendered after the number *default: empty*
+`description` a string displayeed below the number *default: empty*
+
+So a counter with all options set would look like this:
+
+```html
+<iframe src="https://dj1.app.rbb-cloud.de/number-counter/#countFrom=14,81&countTo=6,45&duration=1000&unit=Euro&description=Angebotsmieten im Altbau aktuell und nach Mietendeckel"></iframe>
+```
 
 ## Development
 
@@ -29,7 +51,6 @@ By default, the server will only respond to requests from localhost. To allow co
 
 
 ### Build and Deploy
-### With [now](https://zeit.co/now)
 
 From within your project folder run:
 
