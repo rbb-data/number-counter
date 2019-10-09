@@ -15,6 +15,10 @@ var parseQueryString = function( queryString ) {
 const hash = window.location.hash.replace('#', '')
 const params = parseQueryString(hash)
 
+for (const param in params) {
+  params[param] = decodeURIComponent(params[param])
+}
+
 const app = new App({
   target: document.body,
   props: params

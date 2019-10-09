@@ -19,6 +19,7 @@
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
     "start": "sirv public --single",
-    "start:dev": "sirv public --single --dev"
+    "start:dev": "sirv public --single --dev",
+    "deploy": "npm run build && rsync -srvP --rsync-path='sudo rsync' -e 'ssh -i ~/.ssh/rbb-data.pem' public/ linux@rbb-dj-dev.app.rbb-cloud.de:/var/www/number-counter/"
   }
 }
