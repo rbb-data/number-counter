@@ -13,10 +13,10 @@ You can embed this counter on any website. Just include it as an iframe like thi
 You can set various options as a hash parameter on the iframe url.
 If you omit an option the default value is used.
 
-`countFrom` the initial state of the counter *default: 0*
-`countTo` the final state of the counter *default: 100*
-`duration` the time in ms it takes to get from the inital state to the final state *default: 2000*
-`unit` a unit string rendered after the number *default: empty*
+`countFrom` the initial state of the counter *default: 0*  
+`countTo` the final state of the counter *default: 100*  
+`duration` the time in ms it takes to get from the inital state to the final state *default: 2000*  
+`unit` a unit string rendered after the number *default: empty*  
 `description` a string displayeed below the number *default: empty*
 
 So a counter with all options set would look like this:
