@@ -13,6 +13,7 @@
   let observer
   let elem
 
+  let timer
   let frame
   let startTime = null
 
@@ -21,7 +22,11 @@
     const diff = time - startTime
     let progress = diff / totalTime
     if (progress > 1) progress = 1
-    if (progress < 1) frame = requestAnimationFrame(count)
+    if (progress < 1) {
+      timer = setTimeout(() => {
+        frame = requestAnimationFrame(count)
+      }, 100)
+    }
 
     const range = to - from
 
@@ -48,14 +53,15 @@
 
   onDestroy(() => {
     cancelAnimationFrame(frame)
+    window.clearTimeout(timer)
     observer.unobserve(elem)
   })
 </script>
 
 <style>
   strong {
-    color: purple;
-    font-size: 40px;
+    color: #e31818;
+    font-size: 2.5em;
   }
 </style>
 

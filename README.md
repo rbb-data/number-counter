@@ -17,12 +17,13 @@ If you omit an option the default value is used.
 `countTo` *default: 100* the final state of the counter  
 `duration` *default: 2000* the time in ms it takes to get from the inital state to the final state  
 `unit` *default: empty* a unit string rendered after the number  
-`description` *default: empty* a string displayeed below the number
+`textBefore` *default: empty* a string displayed left to the number  
+`description` *default: empty* a string displayed below the number
 
 So a counter with all options set would look like this:
 
 ```html
-<iframe src="https://dj1.app.rbb-cloud.de/number-counter/#countFrom=14,81&countTo=6,45&duration=1000&unit=Euro&description=Angebotsmieten im Altbau aktuell und nach Mietendeckel"></iframe>
+<iframe src="https://dj1.app.rbb-cloud.de/number-counter/#countFrom=14,81&countTo=6,45&duration=1000&unit=Euro&textBefore=durchschnittlich&description=Angebotsmieten im Altbau aktuell und nach Mietendeckel"></iframe>
 ```
 
 ## Development
