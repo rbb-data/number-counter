@@ -10,6 +10,8 @@ You can embed this counter on any website. Just include it as an iframe like thi
 
 ### Options
 
+**Try out all the options in the [playground](https://dj1.app.rbb-cloud.de/number-counter/playground/)**
+
 You can set various options as a hash parameter on the iframe url.
 If you omit an option the default value is used.
 
@@ -65,3 +67,8 @@ If you have set up access to the rbb server you can just run:
 npm run deploy
 ```
 to deploy it to [https://dj1.app.rbb-cloud.de/number-counter/](https://dj1.app.rbb-cloud.de/number-counter/)
+
+## Playground
+
+There is also a playground app that lives in the filder `playground`. It has the same config as the other app.
+so you need to `cd playgound` and then you can run the same scripts as described above including `npm run deploy`
