@@ -15,6 +15,8 @@
   let frame
   let startTime = null
 
+  const germanNumberFormart = new Intl.NumberFormat('de-DE')
+
   function count() {
     const time = window.performance.now()
     const diff = time - startTime
@@ -28,7 +30,8 @@
 
     const range = countTo - countFrom
     const result = countFrom + progress * range
-    number = progress === 1 ? result : Math.floor(result)
+    const floor = progress === 1 ? result : Math.floor(result)
+    number = germanNumberFormart.format(floor)
   }
 
   function handleIntersection (entries) {
