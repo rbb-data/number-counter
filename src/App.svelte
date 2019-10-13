@@ -52,7 +52,12 @@
 <div class='wrapper'>
   <p class="number-wrapper">
     <span class='text-before'>{textBefore}</span>
-    <NumberAnimator countFrom={+countFrom} countTo={+countTo} duration={+duration} startHack={startHack} />
+    <NumberAnimator
+      countFrom={parseFloat(countFrom)}
+      countTo={parseFloat(countTo)}
+      duration={parseInt(duration)}
+      startHack={startHack}
+    />
     <span class="unit">{unit}</span>
   </p>
   <p>{description}</p>

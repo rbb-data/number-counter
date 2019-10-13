@@ -23,7 +23,7 @@ If you omit an option the default value is used.
 So a counter with all options set would look like this:
 
 ```html
-<iframe src="https://dj1.app.rbb-cloud.de/number-counter/#countFrom=14,81&countTo=6,45&duration=1000&unit=Euro&textBefore=durchschnittlich&description=Angebotsmieten im Altbau aktuell und nach Mietendeckel"></iframe>
+<iframe src="https://dj1.app.rbb-cloud.de/number-counter/#countFrom=14.81&countTo=6.45&duration=1000&unit=Euro&textBefore=durchschnittlich&description=Angebotsmieten im Altbau aktuell und nach Mietendeckel"></iframe>
 ```
 
 ## Development

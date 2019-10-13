@@ -6,10 +6,7 @@
   export let duration
   export let startHack
 
-  $: from = +countFrom
-  $: to = +countTo
-  $: totalTime = +duration
-  $: number = from
+  $: number = countFrom
 
   let observer
   let elem
@@ -21,7 +18,7 @@
   function count() {
     const time = window.performance.now()
     const diff = time - startTime
-    let progress = diff / totalTime
+    let progress = diff / duration
     if (progress > 1) progress = 1
     if (progress < 1) {
       timer = setTimeout(() => {
@@ -29,9 +26,9 @@
       }, 100)
     }
 
-    const range = to - from
-
-    number = Math.floor(from + progress * range)
+    const range = countTo - countFrom
+    const result = countFrom + progress * range
+    number = progress === 1 ? result : Math.floor(result)
   }
 
   function handleIntersection (entries) {
