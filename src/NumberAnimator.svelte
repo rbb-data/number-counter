@@ -54,6 +54,7 @@
       rootMargin: '0px 0px 0px',
       threshold: 0,
     }
+
     observer = new IntersectionObserver(handleIntersection, options)
     observer.observe(elem)
   });
