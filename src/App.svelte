@@ -1,4 +1,7 @@
 <script>
+  // necessary polyfill from NumberAnimator.svelte
+  import 'intersection-observer'
+
   import { onMount } from 'svelte'
   import { onDestroy } from 'svelte'
   import NumberAnimator from './NumberAnimator.svelte'
